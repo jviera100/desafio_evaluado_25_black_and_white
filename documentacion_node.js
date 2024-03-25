@@ -115,6 +115,7 @@ const axios = require('axios');
 const table = require('cli-table3');
 const jimp = require('jimp');
 moment.locale('es'); // idioma fecha
+moment().format('DD-MM-YYYY HH:mm:ss')
 
 const l = console.log; //variable que almacena console.log
 
