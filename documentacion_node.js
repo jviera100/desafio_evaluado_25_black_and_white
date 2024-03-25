@@ -41,7 +41,7 @@
 // Moment: Para formatear las fechas.
 // Lodash: Para dividir el arreglo de usuarios por sexo.
 // Chalk: Para imprimir en la consola con colores.version 5.3 con import
-// npm i express-handlebars bootstrap jquery chalk uuid moment lodash axios cli-table3 jimp path
+// npm i express-handlebars bootstrap jquery path chalk@4.1.2 uuid moment lodash axios cli-table3 jimp
 //👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻
 // npm i --- instala todas las dependencias registradas en json ---👨🏽‍💻
 // npm i cli-table3 ------
@@ -104,8 +104,8 @@ http.createServer((req, res) => {
 // Requerimiento 1: Crear un servidor con Express en el puerto 3000
 import express from 'express' //en json debajo de main "type": "module", => asi funciona import = modo nuevo
 const express = require('express'); // Importa el módulo Express = modo antiguo
-const $ = require('jquery');
 require('bootstrap');
+const $ = require('jquery');
 const path = require("path");
 const chalk = require('chalk');
 const uuid = require('uuid');
