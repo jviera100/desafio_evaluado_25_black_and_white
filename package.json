@@ -1,0 +1,29 @@
+{
+  "name": "desafio_evaluado_25_black_and_white",
+  "version": "1.0.0",
+  "description": "_ 1\r www.desafiolatam.com\r Desafío - Black and White\r En este desafío, pondremos a prueba nuestros conocimientos de procesamiento de imágenes\r con JIMP y la descarga de aplicaciones. Para lograrlo, necesitarás aplicar tus habilidades en\r manipulación de imágenes utilizando la biblioteca JIMP, así como también comprender cómo\r descargar e instalar aplicaciones de manera efectiva.\r Lee todo el documento antes de comenzar el desarrollo grupal, para asegurarte de tener el\r máximo de puntaje y enfocar bien los esfuerzos.\r Descripción\r La empresa Black and White Spa está promocionando una campaña para las redes sociales\r en donde quieren ofrecer un sitio web que permita escribir la URL de una imagen de internet\r y que ésta sea procesada por el servidor para ser devuelta en blanco y negro.\r Deberás crear un servidor que disponibilice una ruta raíz que devuelva un HTML con el\r formulario para ingresar la URL de la imagen con estilos CSS de un documento interno en los\r archivos del servidor. El formulario debe redirigir a otra ruta del servidor que procese la\r imagen y la devuelva en blanco y negro. Como muestran las siguientes imágenes:\r Imagen 1\r _ 2\r www.desafiolatam.com\r Imagen 2\r Requerimientos\r 1. El servidor debe disponibilizar una ruta raíz que devuelva un HTML con el formulario\r para el ingreso de la URL de la imagen a tratar. (3 Puntos)\r 2. Los estilos de este HTML deben ser definidos por un archivo CSS alojado en el\r servidor. (2 Puntos)\r 3. El formulario debe redirigir a otra ruta del servidor que deberá procesar la imagen\r tomada por la URL enviada del formulario con el paquete Jimp. La imagen debe ser\r procesada en escala de grises y redimensionada a unos 350px de ancho. (3 Puntos)\r 4. La imagen alterada debe ser almacenada con un nombre incluya una porción de un\r UUID y con extensión “jpg”, por ejemplo: 3dcb6d.jpeg. (2 Puntos)\r ¡Mucho éxito!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "i": "nodemon index.js || echo 'Error: No se puede iniciar el servidor con nodemon, asegúrate de que archivo.js existe.'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.4",
+    "express": "^4.19.1",
+    "express-handlebars": "^7.1.2",
+    "jimp": "^0.22.12",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

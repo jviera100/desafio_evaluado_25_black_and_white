@@ -8,6 +8,7 @@
 // Product Owner: Es el representante de los stakeholders dentro del equipo Scrum, responsable de maximizar el valor del producto y de gestionar el Product Backlog. Prioriza las tareas y asegura que las necesidades del cliente se reflejen en el trabajo del equipo78.
 // Un stakeholder, o parte interesada, es una persona o grupo que tiene un interés en una empresa o proyecto y que puede ser afectado por sus actividades o decisiones. En el contexto empresarial, los stakeholders pueden incluir empleados, clientes, proveedores, accionistas, inversores, y la comunidad, entre otros12. Son fundamentales para el éxito de una empresa, ya que sus necesidades y opiniones pueden influir en la dirección y estrategias del negocio1.
 // console.log(chalk.underline.bgRedBright.bold.italic(JSON.stringify(persona, null, 2)));
+//👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻
 //---------------------------------------------------
 //--estructura carpetas handlebars--
 //---------------------------------------------------
@@ -40,11 +41,14 @@
 // Moment: Para formatear las fechas.
 // Lodash: Para dividir el arreglo de usuarios por sexo.
 // Chalk: Para imprimir en la consola con colores.version 5.3 con import
-// npm install axios uuid moment lodash chalk nodemon bootstrap jquery express-handlebars.
+// npm i express-handlebars bootstrap jquery chalk uuid moment lodash axios cli-table3 jimp
+//👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻👨🏽‍💻
+// npm i --- instala todas las dependencias registradas en json ---👨🏽‍💻
 // npm i cli-table3 ------
-// npm i chalk@4.1.7
+// npm i chalk@5.3.0 ---pide module import
+// npm i chalk@4.1.2 ---pide require
 //npm uninstall chalk
-//npm update chalk@4.1.7
+//npm update chalk@4.1.2
 //npm update chalk
 //---------------------------------------------------
 //--UUID vs date.now()
@@ -79,10 +83,10 @@ Este sistema de medición es ampliamente utilizado en programación y sistemas i
 */
 /*
  "scripts": {
-   "server": "node app3.js || echo 'Error: No se puede iniciar el servidor con node, asegúrate de que app3.js existe.'",
-   "server-watch": "node --watch app3.js || echo 'Error: No se puede iniciar el servidor con watch node, asegúrate de que app3.js existe.'",
-   "server-nodemon": "nodemon app3.js || echo 'Error: No se puede iniciar el servidor con nodemon, asegúrate de que app3.js existe.'",
-   "start": "nodemon --watch app3.js || echo 'Error: No se puede iniciar el servidor con watch nodemon, asegúrate de que app3.js existe.'"
+   "server": "node index.js || echo 'Error: No se puede iniciar el servidor con node, asegúrate de que index.js existe.'",
+   "server-watch": "node --watch index.js || echo 'Error: No se puede iniciar el servidor con watch node, asegúrate de que index.js existe.'",
+   "server-nodemon": "nodemon index.js || echo 'Error: No se puede iniciar el servidor con nodemon, asegúrate de que index.js existe.'",
+   "start": "nodemon --watch index.js || echo 'Error: No se puede iniciar el servidor con watch nodemon, asegúrate de que index.js existe.'"
  },
  */
 // Requerimiento 0: Crear un servidor con Node en el puerto 3000
@@ -100,8 +104,20 @@ http.createServer((req, res) => {
 // Requerimiento 1: Crear un servidor con Express en el puerto 3000
 import express from 'express' //en json debajo de main "type": "module", => asi funciona import = modo nuevo
 const express = require('express'); // Importa el módulo Express = modo antiguo
+const path = require("path");
+const chalk = require('chalk');
+const uuid = require('uuid');
+const moment = require('moment');
+const _ = require('lodash');
+const axios = require('axios');
+const table = require('cli-table3');
+const jimp = require('jimp');
+moment.locale('es'); // idioma fecha
+
+const l = console.log; //variable que almacena console.log
+
 const routes = express.Router
-const routes = require('/routes/routes'); //modo antiguo
+const routes = require('/routes/routes'); //modo antiguo importa rutas
 const app = express(); //instanciar express
 const port = process.env.PORT || 3000; //Define el puerto del servidor, usa variable de entorno o 3000 por defecto
 const exphbs = require("express-handlebars"); //Importa el motor de plantillas express-handlebars
@@ -184,7 +200,9 @@ app.get('*', (req, res) => { //ultima ruta la generica
 app.listen(port, () => { 
   console.log(`🔥🔥🔥🔥🔥Servidor corriendo en el puerto🔥🔥🔥🔥🔥http://localhost:${port}`);
 });//levantarmiento servidor
-
+app.listen(PORT, () => { 
+  console.log(chalk.underline.bgCyanBright.bold.italic(`🔥🔥🔥🔥🔥Servidor corriendo en el puerto🔥🔥🔥🔥🔥http://localhost:${PORT}`));
+});
 // levanto desde JS
 // levanto servidor => node index
 // cancelo servidor => ctrl c  => te deja volver a escribir en terminal 

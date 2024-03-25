@@ -1,15 +1,17 @@
 const express = require('express');
-const Jimp = require('jimp');
+const chalk = require('chalk');
 const { v4: uuidv4 } = require('uuid');
+const Jimp = require('jimp');
 
 const app = express();
 const PORT = 3000;
+const l = console.log; //variable que almacena console.log
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/formulario.html');
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 app.post('/procesar-imagen', async (req, res) => {
@@ -25,6 +27,6 @@ app.post('/procesar-imagen', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor iniciado en http://localhost:${PORT}`);
-});
+app.listen(PORT, () => { 
+    l(chalk.underline.bgCyanBright.bold.italic(`🔥🔥🔥🔥🔥Servidor corriendo en el puerto🔥🔥🔥🔥🔥http://localhost:${PORT}`));
+  });
