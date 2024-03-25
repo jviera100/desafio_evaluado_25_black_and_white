@@ -1,6 +1,6 @@
 🚀[desafio_evaluado_25_black_and_white](https://desafio_evaluado_25_black_and_white.onrender.com)
 1.-
-www.desafiolatam.com
+🚀www.desafiolatam.com
 Desafío - Black and White
 En este desafío, pondremos a prueba nuestros conocimientos de procesamiento de imágenes
 con JIMP y la descarga de aplicaciones. Para lograrlo, necesitarás aplicar tus habilidades en
